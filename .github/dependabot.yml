@@ -1,0 +1,28 @@
+version: 2
+updates:
+- package-ecosystem: maven
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "04:00"
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: org.mockito:mockito-core
+    versions:
+    - 3.7.7
+    - 3.8.0
+  - dependency-name: ch.ethz.ganymed:ganymed-ssh2
+    versions:
+    - "262"
+  - dependency-name: org.codehaus.groovy:groovy-all
+    versions:
+    - 2.4.21
+  - dependency-name: org.eclipse.jgit:org.eclipse.jgit
+    versions:
+    - 5.10.0.202012080955-r
+  - dependency-name: org.slf4j:slf4j-simple
+    versions:
+    - 1.7.30
+  - dependency-name: org.apache.maven.plugin-testing:maven-plugin-testing-harness
+    versions:
+    - 3.3.0
