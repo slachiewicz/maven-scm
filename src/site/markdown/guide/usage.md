@@ -31,7 +31,7 @@ under the License.
 
 With [Plexus](http://codehaus-plexus.github.io/), it&apos;s very easy to use Maven SCM because it injects all dependencies in fields, so you only have to write minimal code.
 
-```unknown
+```java
 import org.apache.maven.scm.manager.ScmManager;
 
 public class MyApp
@@ -57,7 +57,7 @@ public class MyApp
 
 Without Plexus, you must add all your SCM providers in the manager and that will require more work. You can use the basic SCM manager or write your own:
 
-```unknown
+```java
 import org.apache.maven.scm.manager.BasicScmManager;
 
 public class MyApp
@@ -84,7 +84,7 @@ public class MyApp
 
 Before you call a command, the SCM manager needs an `ScmRepository`. This object contains all the information about the SCM connection.
 
-```unknown
+```java
     public ScmRepository getScmRepository( String scmUrl )
         throw Exception
     {
@@ -107,7 +107,7 @@ Before you call a command, the SCM manager needs an `ScmRepository`. This object
 
 ### Checkout command
 
-```unknown
+```java
     public void checkOut( ScmRepository scmRepository, File workingDirectory )
         throws ScmException
     {
@@ -145,7 +145,7 @@ Before you call a command, the SCM manager needs an `ScmRepository`. This object
 
 ### Update command
 
-```unknown
+```java
     public void update( ScmRepository scmRepository, File workingDirectory )
         throws ScmException
     {
@@ -177,7 +177,7 @@ Before you call a command, the SCM manager needs an `ScmRepository`. This object
 
 In each sample command code, we use the `checkResult` method, it isn&apos;t required but can be useful if something failed in the command execution.
 
-```unknown
+```java
     public void checkResult( ScmResult result )
         throws Exception
     {

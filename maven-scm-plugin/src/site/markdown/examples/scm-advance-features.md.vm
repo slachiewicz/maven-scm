@@ -27,7 +27,7 @@ under the License.
 
 The SCM plugin requires the SCM to be configured in the `pom.xml`.
 
-```unknown
+```xml
 <project>
   ...
   <packaging>jar</packaging>
@@ -47,7 +47,7 @@ Alternatively you can configure the SCM url also in via plugin parameters.
 
 If you want to change the used SCM provider implementation, for example you want to use the JGit instead of the CLI based default implementation, you must configure your plugin like that:
 
-```unknown
+```xml
 <project>
   ...
   <build>
@@ -78,7 +78,7 @@ changelog - displays the project commit changes for each revisions
 
 `pom.xml` configuration :
 
-```unknown
+```xml
 <project>
   ...
   <build>
@@ -103,13 +103,13 @@ changelog - displays the project commit changes for each revisions
 
 Command :
 
-```unknown
+```bash
   mvn scm:changelog
 ```
 
 or you can specify the startDate and endDate on the commandline
 
-```unknown
+```bash
   mvn -DstartDate=YYYY-MM-DD -DendDate=YYYY-MM-DD scm:changelog
 ```
 
@@ -118,7 +118,7 @@ diff
 
 `pom.xml` configuration :
 
-```unknown
+```xml
 <project>
   ...
   <build>
@@ -143,13 +143,13 @@ diff
 
 Command :
 
-```unknown
+```bash
    mvn scm:diff
 ```
 
 or you can specify the startRevision and endRevision in the command line
 
-```unknown
+```bash
    mvn -DstartRevision=<revision> -DendRevision=<revision> scm:diff
 ```
 
@@ -158,7 +158,7 @@ edit - set the edit status of the file, locking the project sources if supported
 
 Command :
 
-```unknown
+```bash
   mvn scm:edit
 ```
 
@@ -167,7 +167,7 @@ status - displays the modified files in the project.
 
 Command :
 
-```unknown
+```bash
    mvn scm:status
 ```
 
@@ -176,7 +176,7 @@ tag
 
 `pom.xml` configuration :
 
-```unknown
+```xml
 <project>
   ...
   <build>
@@ -200,13 +200,13 @@ tag
 
 Command :
 
-```unknown
+```bash
    mvn scm:tag
 ```
 
 or you can specify the tag name in the command line
 
-```unknown
+```bash
    mvn -Dtag="<tag name>" scm:tag
 ```
 
@@ -215,7 +215,7 @@ unedit - unset the edit status of the project sources and unlocking it if suppor
 
 Command :
 
-```unknown
+```bash
    mvn scm:unedit
 ```
 
@@ -224,13 +224,13 @@ validate - check if the scm urls configured in the `pom.xml` is valid.
 
 Command :
 
-```unknown
+```bash
    mvn scm:validate
 ```
 
 or passing the scmConnection or/and the developerConnection in the command line
 
-```unknown
+```bash
    mvn -DscmConnection="<scm url>" -DscmDeveloperConnection="<scm url>" scm:validate
 ```
 

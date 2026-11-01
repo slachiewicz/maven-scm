@@ -36,7 +36,7 @@ Each SCM has a different command line/library API invocation to commit the modif
 
 To configure the SCM support for Maven you need the [SCM](http://maven.apache.org/pom.html#SCM) configuration in your `pom.xml`.
 
-```unknown
+```xml
 <project>
   ...
   <packaging>jar</packaging>
@@ -54,7 +54,7 @@ To configure the SCM support for Maven you need the [SCM](http://maven.apache.or
 
 Maven will use the information embedded in the SCM configuration to determine the used SCM provider (implementation) and the remote repository URL. The SCM configuration URL is composed of different information that define the mapping:
 
-```unknown
+```text
    scm:svn:http://somerepository.com/svn_repo/trunk
    <service name>:<scm implementation>:<repository url>
 ```
@@ -67,13 +67,13 @@ Assuming that SCM has been configured in the `pom.xml` and the project directory
 
 **The files should be added beforehand by an external scm client.**
 
-```unknown
+```bash
   mvn -Dmessage="<commit_log_here>" scm:checkin
 ```
 
 for update
 
-```unknown
+```bash
   mvn scm:update
 ```
 
@@ -83,7 +83,7 @@ There two possible SCM connections that can be used in the `pom.xml`, connection
 
 - connection configuration
 
-    ```unknown
+    ```xml
     <project>
       ...
       <build>
@@ -107,7 +107,7 @@ There two possible SCM connections that can be used in the `pom.xml`, connection
 
 - developerConnection configuration
 
-    ```unknown
+    ```xml
     <project>
       ...
       <build>
