@@ -29,7 +29,7 @@ The Maven SCM client is a simple SCM command line tool.
 
 ## Usage
 
-```unknown
+```shell
 # java -jar target\maven-scm-client-1.1-jar-with-dependencies.jar
 Usage: maven-scm-client <command> <working directory> <scm url> [<scmVersion> [<scmVersionType>]]
 scmVersion is a branch name/tag name/revision number.
@@ -38,7 +38,7 @@ scmVersionType can be 'branch', 'tag', 'revision'. The default value is 'revisio
 
 ## Example
 
-```unknown
+```shell
 # java -jar target\maven-scm-client-1.1-jar-with-dependencies.jar checkout c:\temp\maven-scm-client scm:svn:http://svn.apache.org/repos/asf/maven/scm/trunk/maven-scm-client
 [INFO] Executing: cmd.exe /X /C "svn --non-interactive checkout http://svn.apache.org/repos/asf/maven/scm/trunk/maven-scm-client maven-scm-client"
 [INFO] Working directory: c:\temp

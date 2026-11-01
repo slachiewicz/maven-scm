@@ -29,7 +29,7 @@ Using the `scm:bootstrap` a project can be build from a fresh copy of the source
 
 The `pom.xml` should contain an SCM configuration for the bootstrap to work.
 
-```unknown
+```xml
 <project>
   ...
   <packaging>jar</packaging>
@@ -62,13 +62,13 @@ The `pom.xml` should contain an SCM configuration for the bootstrap to work.
 
 Assuming the SCM configuration has been configured in the `pom.xml`, bootstrapping can be invoked by
 
-```unknown
+```bash
    mvn scm:bootstrap
 ```
 
 or in case of a multi-module project, bootstrapping should be invoked as
 
-```unknown
+```bash
    mvn scm:bootstrap -N
 ```
 

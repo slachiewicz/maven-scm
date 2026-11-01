@@ -43,7 +43,7 @@ In the next section, we&apos;ll see all the steps in details to write a new Mave
 
 Your project need to use some jars from the Maven SCM framework. Add them to your POM.
 
-```unknown
+```xml
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
@@ -85,7 +85,7 @@ The Sisu Maven Plugin will generate the components meta-data file used by the DI
 
 This class will contain all SCM information about your SCM connection (user, password, host, port, path...).
 
-```unknown
+```java
 package org.apache.maven.scm.provider.myprovider.repository;
 
 import org.apache.maven.scm.provider.ScmProviderRepository;
@@ -104,7 +104,7 @@ This class is the central point of the provider. The Maven SCM framework will kn
 
 Before you start to write your SCM provider, you must define the SCM URLs you want to support.
 
-```unknown
+```java
 package org.apache.maven.scm.provider.myprovider;
 
 import org.apache.maven.scm.provider.myprovider.repository.MyScmProviderRepository;
@@ -147,7 +147,7 @@ The JSR330 annotations will be used by the Sisu Maven Plugin, declared in the PO
 
 When you write a new SCM command, you must extend base classes for the Maven SCM framework. We have one base command for each command supported by Maven SCM and each command have an `execute` method that return an SCM result.
 
-```unknown
+```java
 package org.apache.maven.scm.provider.myprovider.command.checkout;
 
 import org.apache.maven.scm.command.checkout.AbstractCheckOutCommand;
@@ -172,7 +172,7 @@ public class MyCheckoutCommand
 
 Now that your command is implemented, you need to add it in your SCM provider (`MyScmProvider`). Open the provider class and override the method that relates to your command.
 
-```unknown
+```java
 public class MyScmProvider
     extends AbstractScmProvider
 {
